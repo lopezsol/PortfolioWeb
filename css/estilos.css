@@ -4,7 +4,8 @@
 body {
   margin: 0;
   padding: 0;
-  height: 1000px;
+  
+  height: 2000px;
   height: auto;
 }
 header,
@@ -17,8 +18,8 @@ header,
 main {
   border: 1px solid black;
 }
-header, footer {
-  height: 70px;
+header, footer, #encabezado {
+  height: 50px;
   background-color: #73626e;
 }
 
@@ -27,12 +28,11 @@ header {
 
 #encabezado {
   position: fixed;
-  height: 70px;
-  background-color: #73626e;
   width: 100%;
   top: 0;
   display: flex;
   justify-content: space-between;
+  z-index: 1;
 }
 
 footer {
@@ -57,10 +57,31 @@ h1 {
 .iconos {
 }
 
-#proyectos,
-.iconos, #conocimientos {
+.iconos {
   display: flex;
   justify-content: space-evenly;
+}
+
+ #grilla-proyectos {
+  display: grid;
+  justify-content: space-evenly;
+  
+  grid-template-columns: 45% 45%;
+  grid-template-rows: auto;
+  row-gap: 10px;
+} 
+
+#grilla-conocimientos {
+  display: grid;
+  justify-content: space-evenly;
+  
+  grid-template-columns: 20% 20% 20% 20%;
+  grid-template-rows: auto;
+  row-gap: 10px;
+} 
+
+#grilla-conocimientos div {
+  border: 1px solid black;
 }
 
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
@@ -109,3 +130,14 @@ h1 {
   color: white;
   transform: rotateY(180deg);
 }
+
+a {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+

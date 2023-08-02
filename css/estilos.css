@@ -99,7 +99,7 @@ main p {
   display: grid;
   justify-content: space-evenly;
   grid-template-columns: 45% 45%;
-  grid-template-rows: 200px 200px;
+  grid-template-rows: 200px;
   row-gap: 15px;
 }
 
@@ -174,7 +174,7 @@ main p {
   display: grid;
   justify-content: space-evenly;
   grid-template-columns: 20% 20% 20% 20%;
-  row-gap: 10px;
+  row-gap: 15px;
 }
 
 .flip-card-back,
@@ -222,7 +222,6 @@ main p {
 }
 
 @media (max-width: 500px) {
-  
   .hacia-derecha {
     width: 70%;
   }
@@ -234,4 +233,34 @@ main p {
     grid-template-columns: 70%;
     grid-template-rows: 200px 200px 200px;
   }
+}
+
+a {
+  border-radius: 30px;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+}
+svg {
+  background-color: #ffffff;
+  fill: black;
+}
+
+.flip-card-back a {
+  background-color: #f7e4be;
+}
+.flip-card-back svg {
+  background-color: #f7e4be;
+}
+a:hover {
+  background-color: #b38184;
+}
+
+a:hover svg {
+  background-color: #b38184;
+
+  fill: black;
 }

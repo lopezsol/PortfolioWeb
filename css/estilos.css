@@ -99,7 +99,6 @@ main p {
   display: grid;
   justify-content: space-evenly;
   grid-template-columns: 45% 45%;
-  grid-template-rows: 200px;
   row-gap: 15px;
 }
 
@@ -114,7 +113,7 @@ main p {
 /* This container is needed to position the front and back side */
 .flip-card-inner {
   position: relative;
-  height: 100%;
+  height: 200px;
   text-align: center;
   transition: transform 0.8s;
   transform-style: preserve-3d;
@@ -199,10 +198,52 @@ main p {
   margin-bottom: 0;
 }
 
+a {
+  border-radius: 30px;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+}
+svg {
+  background-color: #ffffff;
+  fill: black;
+}
+
+.flip-card-back a {
+  background-color: #f7e4be;
+}
+.flip-card-back svg {
+  background-color: #f7e4be;
+}
+a:hover {
+  background-color: #b38184;
+}
+
+a:hover svg {
+  background-color: #b38184;
+  fill: black;
+}
+
 @media (max-width: 1000px) {
   header,
   body {
     font-size: 90%;
+  }
+  section {
+    width: 70%;
+  }
+}
+
+@media (max-width: 850px) {
+  header,
+  body {
+    font-size: 90%;
+  }
+  section {
+    width: 80%;
   }
 }
 
@@ -231,36 +272,34 @@ main p {
 
   #grilla-proyectos {
     grid-template-columns: 70%;
-    grid-template-rows: 200px 200px 200px;
+  }
+
+  #grilla-conocimientos {
+    grid-template-columns: 20% 20% 20%;
+  }
+  #grilla-conocimientos img {
+    width: 50%;
   }
 }
 
-a {
-  border-radius: 30px;
-  width: 45px;
-  height: 45px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #ffffff;
-}
-svg {
-  background-color: #ffffff;
-  fill: black;
+@media (max-width: 300px) {
+  .hacia-derecha {
+    width: 70%;
+  }
+  section {
+    width: 90%;
+  }
+
+  #grilla-proyectos {
+    grid-template-columns: 90%;
+  }
+
+  #grilla-conocimientos {
+    grid-template-columns: 20% 20%;
+  }
+  #grilla-conocimientos img {
+    width: 70%;
+  }
 }
 
-.flip-card-back a {
-  background-color: #f7e4be;
-}
-.flip-card-back svg {
-  background-color: #f7e4be;
-}
-a:hover {
-  background-color: #b38184;
-}
 
-a:hover svg {
-  background-color: #b38184;
-
-  fill: black;
-}

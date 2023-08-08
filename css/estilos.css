@@ -75,16 +75,17 @@ main h1 {
 main h2 {
   font-size: 1.5em;
 }
+main h2 span {
+  font-weight: 700;
+}
 
 main p {
-  text-align: justify;
   padding-left: 1em;
   padding-right: 1em;
 }
 
 #foto-perfil {
   width: 25%;
-  height: 25%;
   margin: auto;
 }
 
@@ -105,20 +106,24 @@ main p {
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-card {
   background-color: transparent;
-  height: 100%;
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  height: 200px;
+  perspective: 1000px;
   border-radius: 10px;
 }
-
+.flip-card img {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+}
 /* This container is needed to position the front and back side */
 .flip-card-inner {
   position: relative;
-  height: 200px;
+  width: 100%;
+  height: 100%;
   text-align: center;
   transition: transform 0.8s;
   transform-style: preserve-3d;
 }
-
 /* Do an horizontal flip when you move the mouse over the flip box container */
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
@@ -136,10 +141,6 @@ main p {
   box-shadow: 2px 3px 6px grey;
 }
 
-.flip-card img {
-  border-radius: 10px;
-}
-
 /* Style the front side (fallback if image is missing) */
 .flip-card-front {
   background-color: #bbb;
@@ -151,6 +152,7 @@ main p {
   transform: rotateY(180deg);
   border-radius: 10px;
   background-color: #f7e4be;
+  padding-bottom: 10px;
 }
 
 .flip-card h1 {
@@ -162,7 +164,12 @@ main p {
 
 .flip-card p {
   font-size: 0.9em;
+  text-align: left;
   color: black;
+}
+
+.flip-card p span {
+  font-weight: 700;
 }
 
 .abajo {
@@ -185,46 +192,40 @@ main p {
 
 #grilla-conocimientos div {
   align-items: center;
+  justify-content: space-between;
 }
 
 #grilla-conocimientos img {
-  width: 40%;
+  max-width: 50px;
+  max-height: 50px;
 }
 
 #grilla-conocimientos h2 {
   font-size: 0.9em;
   color: black;
-  margin-top: auto;
-  margin-bottom: 0;
+  margin-top: 2px;
 }
 
 a {
-  border-radius: 30px;
-  width: 45px;
-  height: 45px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #ffffff;
+  text-decoration: none;
 }
-svg {
-  background-color: #ffffff;
-  fill: black;
+
+i {
+  color: black;
+  font-size: 2em;
+}
+
+.fa-arrow-up-right-from-square {
+  font-size: 1.7em;
+}
+
+a:hover i {
+  color: #b38184;
+  transition: all 0.5s;
 }
 
 .flip-card-back a {
   background-color: #f7e4be;
-}
-.flip-card-back svg {
-  background-color: #f7e4be;
-}
-a:hover {
-  background-color: #b38184;
-}
-
-a:hover svg {
-  background-color: #b38184;
-  fill: black;
 }
 
 @media (max-width: 1000px) {
@@ -248,11 +249,6 @@ a:hover svg {
 }
 
 @media (max-width: 756px) {
-  header,
-  body {
-    font-size: 80%;
-  }
-
   .hacia-derecha {
     width: 50%;
   }
@@ -263,6 +259,9 @@ a:hover svg {
 }
 
 @media (max-width: 500px) {
+  body {
+    font-size: 100%;
+  }
   .hacia-derecha {
     width: 70%;
   }
@@ -283,6 +282,9 @@ a:hover svg {
 }
 
 @media (max-width: 300px) {
+  body {
+    font-size: 100%;
+  }
   .hacia-derecha {
     width: 70%;
   }
@@ -301,5 +303,3 @@ a:hover svg {
     width: 70%;
   }
 }
-
-

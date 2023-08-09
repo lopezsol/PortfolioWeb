@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap");
-
 * {
   box-sizing: border-box;
 }
@@ -8,6 +6,7 @@ body {
   padding: 0;
   font-family: "PT Sans", sans-serif;
   font-size: 100%;
+  background-color: #413e4a;
 }
 
 header,
@@ -37,6 +36,11 @@ footer,
   background-color: #73626e;
 }
 
+body,
+#grilla-conocimientos h2 {
+  color: white;
+}
+
 #encabezado {
   position: fixed;
   top: 0;
@@ -55,7 +59,8 @@ footer,
   font-weight: 400;
 }
 
-footer {
+footer,
+main {
   margin-top: 50px;
 }
 
@@ -63,29 +68,32 @@ section {
   width: 50%;
   margin: auto;
   text-align: center;
-  margin-bottom: 2em;
+  margin-bottom: 4em;
 }
 
 main h1 {
   font-size: 2em;
-  color: #b38184;
-  border-bottom: 1px solid #b38184;
+  color: #f0b49e;
+  border-bottom: 1px solid #f0b49e;
 }
 
 main h2 {
   font-size: 1.5em;
+  margin-bottom: 0;
 }
 main h2 span {
   font-weight: 700;
+  color: #f0b49e;
 }
 
 main p {
   padding-left: 1em;
   padding-right: 1em;
+  margin-top: 0;
 }
 
 #foto-perfil {
-  width: 25%;
+  width: 35%;
   margin: auto;
 }
 
@@ -96,11 +104,16 @@ main p {
   align-items: center;
 }
 
+.iconos {
+  margin-top: 30px;
+}
+
 #grilla-proyectos {
   display: grid;
   justify-content: space-evenly;
   grid-template-columns: 45% 45%;
   row-gap: 15px;
+  margin-top: 30px;
 }
 
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
@@ -138,34 +151,37 @@ main p {
   -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
   border-radius: 10px;
-  box-shadow: 2px 3px 6px grey;
-}
-
-/* Style the front side (fallback if image is missing) */
-.flip-card-front {
-  background-color: #bbb;
-  color: black;
+  border: 1px solid white;
 }
 
 .flip-card-back {
-  color: white;
   transform: rotateY(180deg);
   border-radius: 10px;
-  background-color: #f7e4be;
   padding-bottom: 10px;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-back,
+.flip-card-back a,
+.flip-card-front {
+  background-color: #403c4a;
+}
+
+.flip-card-back i,
+.flip-card h1,
+.flip-card p {
+  color: white;
 }
 
 .flip-card h1 {
   font-size: 1.3em;
-  color: black;
-  border-color: black;
+  border-color: white;
   margin-bottom: 0;
 }
 
 .flip-card p {
   font-size: 0.9em;
   text-align: left;
-  color: black;
 }
 
 .flip-card p span {
@@ -181,6 +197,7 @@ main p {
   justify-content: space-evenly;
   grid-template-columns: 20% 20% 20% 20%;
   row-gap: 15px;
+  margin-top: 30px;
 }
 
 .flip-card-back,
@@ -202,7 +219,6 @@ main p {
 
 #grilla-conocimientos h2 {
   font-size: 0.9em;
-  color: black;
   margin-top: 2px;
 }
 
@@ -211,8 +227,8 @@ a {
 }
 
 i {
-  color: black;
   font-size: 2em;
+  color: white;
 }
 
 .fa-arrow-up-right-from-square {
@@ -222,10 +238,6 @@ i {
 a:hover i {
   color: #b38184;
   transition: all 0.5s;
-}
-
-.flip-card-back a {
-  background-color: #f7e4be;
 }
 
 @media (max-width: 1000px) {
@@ -277,6 +289,9 @@ a:hover i {
     grid-template-columns: 20% 20% 20%;
   }
   #grilla-conocimientos img {
+    width: 50%;
+  }
+  #foto-perfil {
     width: 50%;
   }
 }
